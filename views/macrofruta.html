@@ -1,0 +1,12 @@
+{% macro macro_fruta(fruta) %}
+
+<div class="card" style="width: 18rem;">
+    <img src="{{fruta.url}}" class="card-img-top" onclick="myFunction('{{fruta.url}}','{{fruta.nombre}}', {{fruta.precio}})">
+
+    <div class="card-body">
+        <h5 class="card-title">{{ fruta.nombre }}</h5>
+        <h5 class="card-title">${{ fruta.precio }}c/u</h5>
+    </div>
+</div>
+
+{% endmacro %}

@@ -13,10 +13,10 @@
 
 <body>
     <div class="container-fluid" style="display: block; background-color: green; margin: auto;">
-        <div class="container">
+        <div class="container-fluid" style="text-align: center;">
             <a class="navbar-brand" href="#">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="carrito.jpg"  height="40px">
+                    <img src="carrito.jpg"  height="40px" style="display: block; background-color: green; margin: auto;">
                 </button>
             </a>
         </div>
@@ -38,7 +38,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Mercado Web</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="frutasModal">
+                <div class="modal-body d-flex" id="frutasModal">
                 </div>
                 <div id="precio_total"></div>
             </div>
@@ -63,7 +63,6 @@
         localStorage.setItem('frutas', JSON.stringify(frutas));
 
         precio_total += precio_fruta;
-        console.log(precio_total);
 
         const fruta_seleccionada = document.getElementById("frutasModal");
         fruta_seleccionada.innerHTML += `<img src="${nombre_fruta}.png">`;
